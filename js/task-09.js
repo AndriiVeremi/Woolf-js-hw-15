@@ -10,11 +10,9 @@ const refs = {
   body: document.querySelector('body')
 };
 
-console.log(refs.body)
-
 refs.button.addEventListener("click", onChangeColor);
 
-function onChangeColor(e) {
+function onChangeColor() {
   const newColor = getRandomHexColor();
   refs.colorName.textContent = newColor;
   refs.body.style.backgroundColor = `${newColor}`;
