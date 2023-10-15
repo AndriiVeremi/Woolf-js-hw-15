@@ -7,7 +7,7 @@ function handleSubmit(e) {
   const { email, password } = e.currentTarget.elements;
 
   if (email.value.length === 0 || password.value.length === 0) {
-    alert("Всі поля повинні бути заповнені !!!");
+   return alert("Всі поля повинні бути заповнені !!!");
   }
 
   const user = {
