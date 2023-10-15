@@ -11,13 +11,6 @@ const refs = {
   collection: document.querySelector("#boxes"),
 };
 
-refs.input.addEventListener("input", onInputNumber);
-
-function onInputNumber() {
-  const amount = Number(refs.input.value);
-  return amount;
-}
-
 refs.create.addEventListener("click", () => {
   createBoxes(Number(refs.input.value));
 });
@@ -42,9 +35,8 @@ function createBoxes(amount) {
   refs.collection.append(...arrDivs);
 }
 
-refs.destroy.addEventListener("click", destroyBoxes);
-
-function destroyBoxes() {
+refs.destroy.addEventListener("click", () => {
   refs.collection.innerHTML = "";
   refs.input.value = "";
-}
+});
+
